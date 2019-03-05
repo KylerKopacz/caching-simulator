@@ -3,6 +3,7 @@ public class Cache {
     protected int size;
     protected int capacity;
     protected int index;
+    protected int hits;
 
 
     public Cache(int size) {
@@ -24,8 +25,6 @@ public class Cache {
         return false;
     }
 
-    public void add(int dataToAdd) {}
-
     public void printCache() {
         System.out.println("==================Cache==================");
         for(int i: values) {
@@ -40,5 +39,9 @@ public class Cache {
         } else {
             index++;
         }
+    }
+
+    public int getHits() {
+        return hits;
     }
 }
