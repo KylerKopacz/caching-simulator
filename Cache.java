@@ -6,10 +6,10 @@ public class Cache {
     protected int hits;
 
 
-    public Cache(int size) {
-        this.size = 0;
-        capacity = size;
-        values = new int[size];
+    public Cache(int cacheSize) {
+        size = 0;
+        capacity = cacheSize;
+        values = new int[cacheSize];
         index = 0;
     }
 
