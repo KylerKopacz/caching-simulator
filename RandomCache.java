@@ -10,13 +10,17 @@ public class RandomCache extends Cache {
         rand = new Random();
     }
 
-    public void add(int dataToAdd) {
+    public boolean add(int dataToAdd) {
         if(size == capacity) {//the cache is full and we have to evict
             if(!find(dataToAdd)) {//we have not found the value in the cache
                 values[rand.nextInt(size)] = dataToAdd;
 
                 //now increment the index
                 incrementIndex();
+
+                return false;
+            } else {
+                return true;
             }
         } else {//just add the value to the cache
             if(!find(dataToAdd)) {
@@ -25,8 +29,11 @@ public class RandomCache extends Cache {
             
                 //now we increment the index to the next spot to add a value
                 incrementIndex();
-            } 
+
+                return false;
+            } else {
+                return true;
+            }
         }
     }
-
 }
