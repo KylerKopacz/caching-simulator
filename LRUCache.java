@@ -1,5 +1,8 @@
 import java.util.HashMap;
-
+/** An implementation of the Least Recently Used cache replacement policy.
+ * @author Kyler Kopacz
+ * @author http://kylerkopacz.me
+ */
 public class LRUCache extends Cache {
     /** 
      * For this cache, we are going to use the clock method. 
@@ -9,13 +12,20 @@ public class LRUCache extends Cache {
      */
     
      //to hold the referenced values, we are going to use a hashmap 
-    HashMap<Integer, Boolean> referenceMap;
+    private HashMap<Integer, Boolean> referenceMap;
 
-    public LRUCache(int size) {
-        super(size);
+    /** Constructor for a LRU Cache
+     * @param cacheSize The amount of values the cache can store.
+    */ 
+    public LRUCache(int cacheSize) {
+        super(cacheSize);
         referenceMap = new HashMap<Integer, Boolean>();
     }
 
+    /** Add a value to the cache.
+     * @param dataToAdd The data that will be added to the cache.
+     * @return True if we had a cache hit, false if we did not have a cache hit.
+     */
     public boolean add(int dataToAdd) {
         if(size == capacity) {//the cache is full and we have to evict
             if(!find(dataToAdd)) {//we have not found the value in the cache

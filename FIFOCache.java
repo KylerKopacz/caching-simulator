@@ -1,9 +1,22 @@
+/** Implementation of a first in, irst out Cache.
+ * @author Kyler Kopacz
+ * @author http://kylerkopacz.me
+ */
+
 public class FIFOCache extends Cache {
-        
-    public FIFOCache(int size) {
-        super(size);
+
+
+    /** Constructor for a FIFO Cache
+     * @param cacheSize The amount of values the cache can store.
+    */    
+    public FIFOCache(int cacheSize) {
+        super(cacheSize);
     }
 
+    /** Add a value to the cache.
+     * @param dataToAdd The data that will be added to the cache.
+     * @return True if we had a cache hit, false if we did not have a cache hit.
+     */
     public boolean add(int dataToAdd) {
         if(size == capacity) {//the cache is full and we have to evict
             if(!find(dataToAdd)) {//we have not found the value in the cache

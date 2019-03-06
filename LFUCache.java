@@ -1,18 +1,24 @@
+/** Implementation of a Least-Frequently-Used cache replacement policy.
+ * @author Kyler Kopacz
+ * @author http://kylerkopacz.me
+ */
 public class LFUCache extends Cache {
-    
-    /**
-     * For this, we can just count the number of times that a number occurs by 
-     * creating another array the size of the range of numbers we are working with, 
-     * and incrementing the counter of that corresponding slot every time we see it.
-     */
 
-    int[] frequencies;
+    private int[] frequencies;
 
-    public LFUCache(int size, int upperBound) {
-        super(size);
+    /** Constructor for a LFU Cache
+     * @param cacheSize The amount of values the cache can store.
+     * @param upperBound The max value that can be stored in the cache.
+    */ 
+    public LFUCache(int cacheSize, int upperBound) {
+        super(cacheSize);
         frequencies = new int[upperBound];
     }
 
+    /** Add a value to the cache.
+     * @param dataToAdd The data that will be added to the cache.
+     * @return True if we had a cache hit, false if we did not have a cache hit.
+     */
     public boolean add(int dataToAdd) {
         if(size == capacity) {//the cache is full and we have to evict
             if(!find(dataToAdd)) {//we have not found the value in the cache

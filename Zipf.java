@@ -1,5 +1,8 @@
 import java.util.Random;
-
+/** A number generator that generates requests based on a Zipf distribution
+ * @author Kyler Kopacz
+ * @author http://kylerkopacz.me
+ */
 public class Zipf {
 
     private int distSize;
@@ -7,6 +10,9 @@ public class Zipf {
     private Random r;
     private double[] probMap;
 
+    /** Constructor for the Uniform number generator
+     * @param maxValue The max value that can be generated.
+     */
     public Zipf(int maxValue) {
         r = new Random();
         distSize = maxValue;
@@ -26,6 +32,9 @@ public class Zipf {
         }
     }
 
+    /** Draw a number from a Zipf distribution.
+     * @return The drawn number.
+     */
     public int next() {
         //generate a random double
         double nextValue = r.nextDouble(); 
