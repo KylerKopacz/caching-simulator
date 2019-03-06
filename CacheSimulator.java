@@ -3,6 +3,9 @@ import java.io.IOException;
 import java.io.Writer;
 import java.io.File;
 
+/** Runs a simulation of the 4 included cache replacement policies with the 3 provided distribution types.
+ * Outputs the number of cache hits to a generated csv file.
+ */
 public class CacheSimulator {
     public static void main(String[] args) throws IOException {
         int cacheSize = 10;

@@ -52,6 +52,7 @@ public class Zipf {
         return 0;
     }
 
+    /** Prints the mapped probabilites of the Zipf distribution */
     public void printMap() {
         System.out.println("====================Map values====================");
         for(int i = 1; i < probMap.length; i++) {

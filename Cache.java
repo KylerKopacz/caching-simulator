@@ -5,9 +5,13 @@
  */
 
 public class Cache {
+    /** The values stored in the cache */
     protected int[] values;
+    /** The current amount of items stored in the cache */
     protected int size;
+    /** The amount of spaces in the cache */
     protected int capacity;
+    /** The current index in the cache */
     protected int index;
 
     /** Constructor for a Cache Object.
@@ -46,7 +50,10 @@ public class Cache {
         System.out.println();
     }
 
-    public void incrementIndex() {
+    /** Increments index to the next value in the cache.
+     * If we are at the end of the cache, then it wraps to the front.
+     */
+    protected void incrementIndex() {
         if(index == capacity - 1) {//we have reached the end of the cache
             index = 0;
         } else {

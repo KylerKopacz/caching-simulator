@@ -1,10 +1,9 @@
-/** Implementation of a first in, irst out Cache.
+/** Implementation of a first in, first out Cache.
  * @author Kyler Kopacz
  * @author http://kylerkopacz.me
  */
 
 public class FIFOCache extends Cache {
-
 
     /** Constructor for a FIFO Cache
      * @param cacheSize The amount of values the cache can store.
