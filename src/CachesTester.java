@@ -1,10 +1,10 @@
 public class CachesTester {
     public static void main(String[] args) {
-        Uniform dist = new Uniform(20);
+        Uniform dist = new Uniform(1000);
 
         //The FIFO Cache
         System.out.println("###############THE FIFO CACHE###############");
-        FIFOCache fifoc = new FIFOCache(3);
+        FIFOCache fifoc = new FIFOCache(5);
         for(int i = 0; i < 10; i++) {
             int numToAdd = dist.next();
             System.out.println("\nAdding " + numToAdd + "...");
@@ -37,7 +37,7 @@ public class CachesTester {
 
         //The LFU Cache
         System.out.println("###############THE LFU CACHE###############");
-        LFUCache lfuc = new LFUCache(5, 20);
+        LFUCache lfuc = new LFUCache(5, 1000);
         for(int i = 0; i < 20; i++) {
             int numToAdd = dist.next();
             lfuc.add(numToAdd);

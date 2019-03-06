@@ -17,7 +17,7 @@ public class ZipfTester {
             total++;
         }
 
-        System.out.println("\n=====Summary=====");
+        System.out.println("\n=====Summary of Probabilites Drawn=====");
         for(int i = 0; i < counts.length; i++) {
             System.out.println((i+1) + " : " + (counts[i]/total));
         }
