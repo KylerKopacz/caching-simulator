@@ -206,5 +206,6 @@ public class CacheSimulator {
         try {
             wr.close();
         } catch (IOException e) {}
+        System.out.println("The results of this simulation were written to the results.csv file!");
     }
 }
