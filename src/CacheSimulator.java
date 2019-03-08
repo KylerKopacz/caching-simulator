@@ -5,6 +5,8 @@ import java.io.File;
 
 /** Runs a simulation of the 4 included cache replacement policies with the 3 provided distribution types.
  * Outputs the number of cache hits to a generated csv file.
+ * @author Kyler Kopacz
+ * @author http://kylerkopacz.me
  */
 public class CacheSimulator {
     public static void main(String[] args) throws IOException {
