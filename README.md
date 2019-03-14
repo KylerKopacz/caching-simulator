@@ -5,7 +5,11 @@ We tested 4 different caching policies against 3 different data request distribu
 
 The distributions were from a Uniform, a Zipf, and from a distribution with high temporal locality.
 
-The caching policies implemented were random replacement, first in first out (fifo), least recently used (lru), and least frequently used (lfu).
+The caching policies implemented:
+1. Random Replacement
+2. Least Recently Used (LRU) Replacement
+3. First In, First Out (FIFO) Replacement
+4. Least Frequently Used (LFU) Replacement
 
 To run the simulation:
 1. Make sure all java files are within the same directory
